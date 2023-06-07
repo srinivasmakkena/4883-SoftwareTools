@@ -1,0 +1,21 @@
+digraph bst{
+    splines=line
+    node [shape=record]
+    edge  [arrowhead=vee, arrowtail=dot, color=blue, dir=both, tailclip=false]; 
+    
+    A [label="<left> | <data> 15 | <right>"]
+    B [label="<left> | <data> 12 | <right>"];
+    C [label="<left> | <data> 25 | <right>"];
+    D [label="<left> | <data> 10 | <right>"];
+    E [label="<left> | <data> 14 | <right>"];
+    F [label="<left> | <data> 18 | <right>"];
+    G [label="<left> | <data> 28 | <right>"];
+
+    A:left:c -> B:data;
+    A:right:c -> C:data;
+    B:left:c -> D:data;
+    B:right:c -> E:data;
+    C:left:c -> F:data;
+    C:right:c -> G:data;
+    
+}
