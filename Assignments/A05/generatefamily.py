@@ -53,7 +53,7 @@ def generate_random_marriage_age():
 
 def generate_random_child_counts_for_couple():
     male_ratio = 0.51  # Male to total ratio
-    probabilities = [0.2, 0.35, 0.15] 
+    probabilities = [0.2, 0.35, 0.09] 
     total_children = random.choices(range(0,3), probabilities)[0]
     male_children = round(total_children * male_ratio)
     female_children = total_children - male_children    
@@ -77,17 +77,17 @@ def are_siblings(person1, person2, family_data):
 
 def generate_random_spouse(person, available_males, family_data):
     try:
-        for _ in range(100):  # Limit the attempts to prevent an infinite loop
+        for _ in range(100): 
             male = random.choice(available_males)
             if (
                 male.last_name != person.last_name
                 and person.last_name not in male.last_name
                 and male.spouse_id==None
-                and not are_siblings(male, person, family_data)  # Check if the male and person are siblings
+                and not are_siblings(male, person, family_data) 
             ):
                 available_males.remove(male)
-                person.spouse_id = male.pid  # Assign spouse ID to the person
-                male.spouse_id = person.pid  # Assign spouse ID to the male
+                person.spouse_id = male.pid 
+                male.spouse_id = person.pid 
                 return male
     except:pass
     return  Person(name=random.choice(male_first_names),generation=person.generation,last_name=random.choice(last_names),clan=random.choice(clan_names),gender="Male",byear=generate_random_birth_year(spouse_byear=person.byear))

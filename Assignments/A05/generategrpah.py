@@ -3,14 +3,19 @@ import math
 import pandas as pd
 import os
 from generatefamily import get_random_family_data
+from PIL import Image
+
 
 graph = graphviz.Digraph()
 
-number_of_generations=5
+number_of_generations=6
+
+current_location = os.path.dirname(os.path.abspath(__file__))
+image_base_path = current_location + '/resources/images/'
 
 get_random_family_data(no_generations=number_of_generations)
 
-df = pd.read_csv('family_data.csv')
+df = pd.read_csv(current_location+'//family_data.csv')
 
 max_generation = int(df['generation'].max())
 min_birth_year = int(df['byear'].min())
@@ -18,8 +23,7 @@ max_birth_year = int(df['byear'].max())
 median_birth_year = int(df['byear'].median())
 
 ranks = {f'rank{i}': [] for i in range(1, max_generation + 1)}
-current_location = os.path.dirname(os.path.abspath(__file__))
-image_base_path = current_location + '/resources/images/'
+
 
 for _, row in df.iterrows():
     pid = str(row['pid'])
