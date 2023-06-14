@@ -6,7 +6,7 @@ from generatefamily import get_random_family_data
 
 graph = graphviz.Digraph()
 
-get_random_family_data(no_generations=3)
+get_random_family_data(no_generations=4)
 
 df = pd.read_csv('family_data.csv')
 
@@ -57,12 +57,20 @@ for _, row in df.iterrows():
     graph.node(pid, label, shape='box')
 
     if not pd.isna(spouse_id):
-        graph.edge(pid, str(int(spouse_id)), style='dashed')
+        graph.edge(pid, str(int(spouse_id)),color='black', penwidth='2')
 
     if not pd.isna(parent_id1):
-        graph.edge(str(int(parent_id1)), pid)
+        if df.loc[df['pid'] == parent_id1, 'gender'].values[0]=="Male":
+            color='blue'
+        else:
+            color='orange'
+        graph.edge(str(int(parent_id1)), pid,color=color, penwidth='3')
     if not pd.isna(parent_id2):
-        graph.edge(str(int(parent_id2)), pid)
+        if df.loc[df['pid'] == parent_id2, 'gender'].values[0]=="Male":
+            color='blue'
+        else:
+            color='orange'
+        graph.edge(str(int(parent_id2)), pid,color=color, penwidth='3')
 
     rank = f'rank{int(generation)}'
     ranks[rank].append((pid, label))
@@ -74,5 +82,20 @@ for rank, nodes in ranks.items():
         sub.attr(rank='same')
         for node, label in nodes:
             sub.node(node, label)
+legend_items = {
+    'black': 'Spouse Edge Relation',
+    'orange': 'Mother-Child Relation',
+    'blue': 'Father-Child Relation'
+}
+
+# Create a subgraph for the legend
+with graph.subgraph(name='cluster_legend') as legend:
+    legend.attr(label='Color code of Edges', labelloc='top', fontweight='bold', labeljust='center', fontsize='15', underline='true', shape='invis', style='filled', color='lightgrey')
+    legend.attr(rankdir='TB')
+    legend.attr('node', shape='plaintext')
+
+    for color, label in legend_items.items():
+        legend.node(color, label, color=color, fontcolor='white', fontweight='bold', shadow='true',fontsize='15', shape='box', width='2', height='0.5', padding='0',style='filled')
+
 
 graph.render('family_tree', format='png', view=True)

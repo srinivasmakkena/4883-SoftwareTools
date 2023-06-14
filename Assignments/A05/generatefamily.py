@@ -53,8 +53,8 @@ def generate_random_marriage_age():
 
 def generate_random_child_counts_for_couple():
     male_ratio = 0.51  # Male to total ratio
-    probabilities = [0.2, 0.35, 0.25, 0.15, 0.03, 0.02] 
-    total_children = random.choices(range(0,6), probabilities)[0]
+    probabilities = [0.2, 0.35, 0.15] 
+    total_children = random.choices(range(0,3), probabilities)[0]
     male_children = round(total_children * male_ratio)
     female_children = total_children - male_children    
     return male_children, female_children
@@ -67,7 +67,7 @@ def generate_random_birth_year(parent_byear=None,spouse_byear=None,fspouse_byear
     elif fspouse_byear is not None:
         birth_year = random.randint(fspouse_byear+2, fspouse_byear+10)
     else:
-        birth_year = random.randint(1850,datetime.datetime.now().year)
+        birth_year = random.randint(1850,1950)
     return birth_year
 
 def are_siblings(person1, person2, family_data):
