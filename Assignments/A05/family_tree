@@ -1,0 +1,85 @@
+digraph {
+	graph [nodesep=1.2 rankdir=TB ranksep=1.5 splines=ortho]
+	1 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Advaith Mukherjee</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1925-1982)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	1 -> 2 [color=black penwidth=2]
+	2 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Vasavi Mukherjee</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1922-1989)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	2 -> 1 [color=black penwidth=2]
+	3 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Jayavardhan Prasad</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1948-2018)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	3 -> 4 [color=black penwidth=2]
+	2 -> 3 [color=orange penwidth=3]
+	1 -> 3 [color=blue penwidth=3]
+	4 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Saraswathi Agarwal</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1950-_)</TD></TR><TR><TD>clan: (Angirasa)</TD></TR></TABLE>> shape=box]
+	4 -> 3 [color=black penwidth=2]
+	5 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Madhavan Kaur</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1965-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	5 -> 6 [color=black penwidth=2]
+	2 -> 5 [color=orange penwidth=3]
+	1 -> 5 [color=blue penwidth=3]
+	6 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Lakshmi Bhatia</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1972-_)</TD></TR><TR><TD>clan: (Angirasa)</TD></TR></TABLE>> shape=box]
+	6 -> 5 [color=black penwidth=2]
+	7 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Vinod Prasad</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1977-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	7 -> 8 [color=black penwidth=2]
+	3 -> 7 [color=blue penwidth=3]
+	4 -> 7 [color=orange penwidth=3]
+	8 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Arundhati Mishra</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1979-_)</TD></TR><TR><TD>clan: (Mukherjee)</TD></TR></TABLE>> shape=box]
+	8 -> 7 [color=black penwidth=2]
+	9 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Chetan Mukherjee</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1965-2014)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	9 -> 10 [color=black penwidth=2]
+	1 -> 9 [color=blue penwidth=3]
+	2 -> 9 [color=orange penwidth=3]
+	10 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Rashi Mohan</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1967-_)</TD></TR><TR><TD>clan: (Bharadwaja)</TD></TR></TABLE>> shape=box]
+	10 -> 9 [color=black penwidth=2]
+	11 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Lakshminarayan Singh</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1973-1997)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	11 -> 12 [color=black penwidth=2]
+	2 -> 11 [color=orange penwidth=3]
+	1 -> 11 [color=blue penwidth=3]
+	12 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Gopika Goswami</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1980-_)</TD></TR><TR><TD>clan: (Kuru)</TD></TR></TABLE>> shape=box]
+	12 -> 11 [color=black penwidth=2]
+	13 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Deepa Singh</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1944-2018)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	13 -> 14 [color=black penwidth=2]
+	2 -> 13 [color=orange penwidth=3]
+	1 -> 13 [color=blue penwidth=3]
+	14 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Narendra Sinha</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1935-_)</TD></TR><TR><TD>clan: (Raju)</TD></TR></TABLE>> shape=box]
+	14 -> 13 [color=black penwidth=2]
+	15 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Girish Prasad</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/kid_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (2008-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	15 -> 16 [color=black penwidth=2]
+	7 -> 15 [color=blue penwidth=3]
+	8 -> 15 [color=orange penwidth=3]
+	16 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Ashwini Jha</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/kid_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (2016-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>> shape=box]
+	16 -> 15 [color=black penwidth=2]
+	{
+		rank=same
+		1 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Advaith Mukherjee</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1925-1982)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		2 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Vasavi Mukherjee</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1922-1989)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+	}
+	{
+		rank=same
+		3 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Jayavardhan Prasad</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1948-2018)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		4 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Saraswathi Agarwal</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1950-_)</TD></TR><TR><TD>clan: (Angirasa)</TD></TR></TABLE>>]
+	}
+	{
+		rank=same
+		5 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Madhavan Kaur</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1965-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		6 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Lakshmi Bhatia</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1972-_)</TD></TR><TR><TD>clan: (Angirasa)</TD></TR></TABLE>>]
+		7 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Vinod Prasad</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1977-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		8 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Arundhati Mishra</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1979-_)</TD></TR><TR><TD>clan: (Mukherjee)</TD></TR></TABLE>>]
+	}
+	{
+		rank=same
+		9 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Chetan Mukherjee</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1965-2014)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		10 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Rashi Mohan</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1967-_)</TD></TR><TR><TD>clan: (Bharadwaja)</TD></TR></TABLE>>]
+		11 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Lakshminarayan Singh</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1973-1997)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		12 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Gopika Goswami</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/young_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1980-_)</TD></TR><TR><TD>clan: (Kuru)</TD></TR></TABLE>>]
+		13 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Deepa Singh</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (1944-2018)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		14 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Narendra Sinha</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/old_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (1935-_)</TD></TR><TR><TD>clan: (Raju)</TD></TR></TABLE>>]
+		15 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Girish Prasad</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/kid_male.png'/></TD></TR><TR><TD>Gender: (Male)</TD></TR><TR><TD>Years: (2008-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+		16 [label=<<TABLE BORDER='0' CELLBORDER='1' CELLSPACING='0'><TR><TD><FONT FACE='arial' POINT-SIZE='14'><B>Ashwini Jha</B></FONT></TD></TR><TR><TD><IMG SRC='D:\MSU\softwaretools\4883-SoftwareTools-Makkena\Assignments\A05/resources/images/kid_female.png'/></TD></TR><TR><TD>Gender: (Female)</TD></TR><TR><TD>Years: (2016-_)</TD></TR><TR><TD>clan: (Reddy)</TD></TR></TABLE>>]
+	}
+	subgraph cluster_legend {
+		color=lightgrey fontsize=15 fontweight=bold label="Color code of Edges" labeljust=center labelloc=top shape=invis style=filled underline=true
+		rankdir=TB
+		node [shape=plaintext]
+		black [label="Spouse Edge Relation" color=black fontcolor=white fontsize=15 fontweight=bold height=0.5 padding=0 shadow=true shape=box style=filled width=2]
+		orange [label="Mother-Child Relation" color=orange fontcolor=white fontsize=15 fontweight=bold height=0.5 padding=0 shadow=true shape=box style=filled width=2]
+		blue [label="Father-Child Relation" color=blue fontcolor=white fontsize=15 fontweight=bold height=0.5 padding=0 shadow=true shape=box style=filled width=2]
+	}
+}

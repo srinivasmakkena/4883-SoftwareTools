@@ -148,7 +148,7 @@ def get_random_family_data(no_generations=1):
     family_data.extend([parent1, parent2])
 
     
-    for generation in range(2, no_generations + 1):
+    for generation in range(1, no_generations + 1):
         new_generation = []
         for person in family_data:
             child_counts = list(generate_random_child_counts_for_couple()) 

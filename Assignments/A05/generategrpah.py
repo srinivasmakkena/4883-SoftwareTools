@@ -6,7 +6,9 @@ from generatefamily import get_random_family_data
 
 graph = graphviz.Digraph()
 
-get_random_family_data(no_generations=4)
+number_of_generations=4
+
+get_random_family_data(no_generations=number_of_generations)
 
 df = pd.read_csv('family_data.csv')
 
@@ -76,7 +78,10 @@ for _, row in df.iterrows():
     ranks[rank].append((pid, label))
 
 graph.graph_attr['rankdir'] = 'TB'
-
+graph.graph_attr['nodesep'] = '1.2'
+graph.graph_attr['ranksep'] = '1.5'
+# graph.graph_attr["splines"] = "polyline"
+graph.graph_attr["splines"] = "ortho"
 for rank, nodes in ranks.items():
     with graph.subgraph() as sub:
         sub.attr(rank='same')
