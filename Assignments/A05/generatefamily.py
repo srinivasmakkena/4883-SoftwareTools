@@ -61,7 +61,7 @@ def generate_random_child_counts_for_couple():
 
 def generate_random_birth_year(parent_byear=None,spouse_byear=None,fspouse_byear=None):
     if parent_byear is not None:
-        birth_year = random.randint(min(parent_byear+20,random.randint(current_year-50,current_year)), min(parent_byear+60,current_year))
+        birth_year = random.randint(parent_byear+20, parent_byear+60)
     elif spouse_byear is not None:
         birth_year = random.randint(spouse_byear-10, spouse_byear-2)
     elif fspouse_byear is not None:
@@ -154,10 +154,10 @@ def get_random_family_data(no_generations=1):
             child_counts = list(generate_random_child_counts_for_couple()) 
             for _ in range(sum(child_counts)):
                 is_male = child_counts[0] > 0
-                if is_male and person.gender == "Male":
-                    last_name = person.last_name  
-                else:
-                    last_name = random.choice(last_names)
+                # if is_male and person.gender == "Male":
+                last_name = person.last_name  
+                # else:
+                #     last_name = random.choice(last_names)
                 child = Person(
                     name=random.choice(male_first_names) if is_male else random.choice(female_first_names),
                     last_name=last_name,
