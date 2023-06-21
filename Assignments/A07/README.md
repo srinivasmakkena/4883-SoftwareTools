@@ -24,4 +24,8 @@ The following files and folders are included:
 6. Close the program by clicking the "Close" button.
 
 With this program, you can easily retrieve and view airport weather data for different dates and airports.
+## Screesnshots
+![image](https://github.com/srinivasmakkena/4883-SoftwareTools-Makkena/assets/32659482/ae1ef56d-7508-4e32-8ea2-0a0d8e1cd16d)
+
+![image](https://github.com/srinivasmakkena/4883-SoftwareTools-Makkena/assets/32659482/4b76af1b-4b85-46ba-82ac-b4fb6ffb2563)
 
