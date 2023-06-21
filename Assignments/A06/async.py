@@ -7,7 +7,7 @@ async def main():
     page = await browser.newPage()
     await page.goto('https://www.wunderground.com/history/daily/KLAW/date/2023-6-13')
     content = await page.content()
-    # await page.screenshot({'path': currentlocation+'//image.png'})
+    await page.screenshot({'path': currentlocation+'//image.png'})
     await browser.close()
     return content
 

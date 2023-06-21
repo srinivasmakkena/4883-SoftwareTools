@@ -8,7 +8,7 @@ from PIL import Image
 
 graph = graphviz.Digraph()
 
-number_of_generations=6
+number_of_generations=4
 
 current_location = os.path.dirname(os.path.abspath(__file__))
 image_base_path = current_location + '/resources/images/'
