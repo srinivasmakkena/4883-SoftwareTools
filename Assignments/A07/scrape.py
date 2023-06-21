@@ -14,6 +14,7 @@ with open(currentlocation + '\\Resources\\airport-codes.json', 'r') as file:
 # Convert JSON to dictionary
 data_dict = json.loads(json_data)
 airport_codes = [data['icao'] for data in data_dict]
+
 current_date = datetime.now()
 default_year = str(current_date.year)
 default_month = current_date.strftime('%B')
@@ -71,22 +72,14 @@ while True:
     event, values = window.read()
     if event == sg.WINDOW_CLOSED or event == '-CLOSE-':
         break
-
     elif event == '-SUBMIT-':
         selected_filter = values['-FILTER-']
         airport_code = values['-AIRPORT-']
         year = values['-YEAR-']
         month = month_dict.get(values['-MONTH-'], "")
         day = values['-DAY-']
-        print(f'Filter: {selected_filter}')
-        print(f'Airport Code: {airport_code}')
-        print(f'Year: {year}')
-        print(f'Month: {month}')
-        print(f'Day: {day}')
         url = f'https://www.wunderground.com/history/{selected_filter}/{airport_code}/date/{year}-{month}-{day}'
-        
         window.close()    
         content, headings = get_dynamic_content(url)
-        
         create_table_view(content, headings,airport_code,year,month,day)
         
