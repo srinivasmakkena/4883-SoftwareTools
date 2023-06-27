@@ -23,3 +23,6 @@ This project provides a way to generate a random family tree and visualize it us
 5. The output of the script will be the family tree graph saved as family_tree.png, representing the relationships between the generated individuals.
 
 With this project, you can easily create and visualize random family tree data, allowing you to explore different family structures and relationships.
+
+## output
+![output image](https://github.com/srinivasmakkena/4883-SoftwareTools-Makkena/blob/main/Assignments/A05/family_tree.png)
