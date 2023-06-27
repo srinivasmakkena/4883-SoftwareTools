@@ -10,3 +10,4 @@
 
 ### Instructions:
 To run the DOT file, you can utilize tools like [Graphviz Online](https://dreampuf.github.io/GraphvizOnline/) or install the Graphviz Preview extension in VSCode. To visualize the output, simply press Ctrl+Shift+P in VSCode and select the Graphviz Preview extension.
+![bst_image_alt_text](https://github.com/srinivasmakkena/4883-SoftwareTools-Makkena/blob/main/Assignments/A04/bst.png
