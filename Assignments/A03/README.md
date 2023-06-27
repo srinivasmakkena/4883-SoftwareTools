@@ -6,3 +6,5 @@
 ### FFMPEG offers a wide range of capabilities, including video and audio encoding, decoding, transcoding, filtering, and streaming. It supports a vast array of formats and codecs, making it highly versatile for handling diverse media requirements. Additionally, FFMPEG provides a command-line interface, which allows for efficient batch processing and automation.
 
 ### I have particularily chosen this tool since i used it before for my project for merging frames and audio from different source video formats.
+
+[ffmpeg documentation link](https://ffmpeg.org/documentation.html)
