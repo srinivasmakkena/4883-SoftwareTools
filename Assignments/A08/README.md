@@ -1,6 +1,14 @@
-# COVID-19 Data API
-
+# FastAPI - COVID-19 Data API
+## Srinivas Makkena
 This is a simple API that provides information about COVID-19 cases and deaths. It allows users to retrieve total counts, filter data by country and year, and find countries with maximum and minimum deaths in a specified date range.
+
+
+
+| File          | Description                                     |
+|---------------|-------------------------------------------------|
+| [api.py](https://github.com/srinivasmakkena/4883-SoftwareTools-Makkena/blob/main/Assignments/A08/api.py)       | The main Python script for the FastAPI server.   |
+| [data.csv](https://github.com/srinivasmakkena/4883-SoftwareTools-Makkena/blob/main/Assignments/A08/Resources/data.csv)      | The CSV file containing the COVID-19 data.       |
+
 
 ## Installation
 
