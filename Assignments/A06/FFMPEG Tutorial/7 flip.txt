@@ -1,0 +1,6 @@
+Flipping and Rotating Video
+	flip
+		ffmpeg -i input -vf vflip output
+
+	rotate
+		ffplay -i smptebars -vf transpose=0

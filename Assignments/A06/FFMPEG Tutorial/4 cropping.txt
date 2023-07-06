@@ -1,0 +1,2 @@
+Cropping frame center
+	ffmpeg -i input.avi -vf crop=iw/2:ih/2 output.avi

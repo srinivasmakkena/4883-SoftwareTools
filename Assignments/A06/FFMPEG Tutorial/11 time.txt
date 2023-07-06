@@ -1,0 +1,4 @@
+crop particular time
+	ffmpeg -i video.mpg -ss 240 -t 60 clip_5th_minute.mpg
+	
+	ffmpeg -i myvid.mp4 -ss 480 -t 180 -c copy -map 0 finalvid.mp4

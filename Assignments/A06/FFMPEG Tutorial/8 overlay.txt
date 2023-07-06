@@ -1,0 +1,6 @@
+overlay 
+	ffmpeg -i pair.mp4 -i logo.png -filter_complex overlay pair1.mp4
+
+	ffmpeg -i pair.mp4 -i logo.png -filter_complex overlay=W-w:H-h pair2.mp4
+	
+	ffmpeg -i pair.mp4 -i logo.png -filter_complex overlay=x:y pair2.mp4

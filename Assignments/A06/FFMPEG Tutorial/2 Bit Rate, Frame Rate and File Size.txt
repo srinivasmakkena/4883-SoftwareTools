@@ -1,0 +1,9 @@
+Setting fps
+	ffmpeg -i input -r fps output
+	ffmpeg -i clip.mpg -vf fps=fps=25 clip.webm
+
+Setting bit rate
+	ffmpeg -i film.avi -b 1.5M film.mp4
+
+Setting maximum size of output file
+	ffmpeg -i input.avi -fs 10MB output.mp4

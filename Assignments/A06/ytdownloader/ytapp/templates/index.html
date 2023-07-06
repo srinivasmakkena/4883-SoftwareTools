@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title>Tabbed Window with Video Background</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      
+      .nav-pills .nav-link {
+        color: #dddddd !important;
+      }
+      
+      .nav-pills .nav-link.active {
+        color: white !important;
+      }
+      
+      .nav-pills .nav-link:hover {
+        color: white !important;
+        background: rgba(200, 150, 0, 0.7);
+      }
+      
+      .nav-pills .nav-link:focus {
+        color: white !important;
+      }
+      
+      .tab-pane {
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        margin-top: 10px;
+      }
+
+      .toolbar {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .toolbar button {
+        background: #f8f8f8;
+        padding: 5px 10px;
+        margin-right: 5px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .nav-link {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(1px);
+      }
+
+      .nav-link.active {
+        background: rgba(0, 0, 0, 0.7);
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  </head>
+  <body>
+    <div id="video-bg">
+      <video autoplay muted loop poster="{% static 'bg.mp4' %}">
+        <source src="{% static 'bg.mp4' %}" type="video/mp4" />
+        <!-- Add other video formats for cross-browser compatibility -->
+      </video>
+    </div>
+
+    <div
+      class="container"
+      style="
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(1px);
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        margin-top: 10px;
+      "
+    >
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item  mr-3">
+          <a
+            class="nav-link active"
+            id="tab1-tab"
+            data-toggle="pill"
+            href="#tab1"
+            role="tab"
+            aria-controls="tab1"
+            aria-selected="true"
+            >YT downloader</a
+          >
+        </li>
+        <li class="nav-item  mr-3">
+          <a
+            class="nav-link"
+            id="tab2-tab"
+            data-toggle="pill"
+            href="#tab2"
+            role="tab"
+            aria-controls="tab2"
+            aria-selected="false"
+            >Downloads</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="tab3-tab"
+            data-toggle="pill"
+            href="#tab3"
+            role="tab"
+            aria-controls="tab3"
+            aria-selected="false"
+            >About</a
+          >
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="tab1" class="tab-pane fade show active">
+          <!-- Content for Tab 1 -->
+          <div class="search-container">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="searchInput"
+                placeholder="Paste video URL"
+                required
+              />
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-primary search-button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="yt-player text-center">
+            <iframe  id="yt-iframe"
+              width="560"
+              height="315"
+              src=""
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div class="video-details">
+              <h4 id="video-title"></h4>
+              <p>Convert and download Youtube videos in different formats for free</p>
+            </div>
+          </div>
+          <div class="dropdowns d-flex justify-content-center align-items-center">
+            <div class="dropdown mr-3">
+              <select class="btn btn-primary" id="dropdown1" onchange="handleDropdownChange(this.value)">
+                <option disabled selected></option>
+              </select>
+            </div>
+            <button type="button" class="btn btn-primary download-button" onclick="startDownload()">
+              Download
+            </button>
+          </div>
+          
+        
+          
+        </div>
+
+        <div id="tab2" class="tab-pane fade">
+          <!-- Content for Tab 2 -->
+          <h2>Tab 2 Content</h2>
+          <p>This is the content for Tab 2.</p>
+        </div>
+
+        <div id="tab3" class="tab-pane fade">
+          <!-- Content for Tab 3 -->
+          <h2>Tab 3 Content</h2>
+          <p>This is the content for Tab 3.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        // Disable elements initially
+        $('#searchInput').prop('disabled', false);
+        $('.yt-player iframe').prop('disabled', true);
+        $('.dropdowns button').prop('disabled', true);
+        $('.download-button').prop('disabled', true);
+
+        // Click event handler for the search button
+        $('.search-button').click(function () {
+          var url = $('#searchInput').val();
+
+          // Perform AJAX request to retrieve data
+          $.ajax({
+            url: 'search_endpoint',
+            type: 'GET',
+            data: { url: url },
+            success: function (response) {
+              console.log(response);
+              //$('#searchInput').prop('disabled', true);
+              $('.yt-player iframe').prop('disabled', false);
+              $('.dropdowns button').prop('disabled', false);
+              $('.download-button').prop('disabled', false);
+              $('.yt-player iframe').attr('src', response.videoSrc);
+              var videoTitle = document.getElementById('video-title');
+              videoTitle.textContent = ''; // Clear the text message
+              var dropdown1 = $('#dropdown1');
+              dropdown1.empty();
+              $.each(response.dropdown1Options, function (index, option) {
+                var optionText = 'Format: ' + ' (' + option.format_note + ')';
+                if (option.vcodec !== 'none') {
+                  optionText += ' - Video Codec: ' + option.vcodec;
+                }
+                if (option.acodec !== 'none') {
+                  optionText += ' - Audio Codec: ' + option.acodec;
+                }
+                if (option.size !== null) {
+                  optionText += ' - Size : ' + option.size;
+                }
+                dropdown1.append('<option value="' + option.url + '">' + optionText + '</option>');
+              });
+              
+
+            },
+            error: function (error) {
+              // Handle error
+            },
+          });
+        });
+      });
+      function startDownload() {
+        var selectedOption = $('#dropdown1').val();
+        if (selectedOption) {
+          // Send AJAX request to Django URL
+          $.ajax({
+            url: 'add_download',
+            method: 'GET',
+            data: { dropdownValue: selectedOption },
+            success: function(response) {
+              
+              Swal.fire({
+                icon: 'success',
+                title: 'opening Downloading Page',
+                showConfirmButton: false,
+                timer: 1500
+              });
+              setTimeout(function() {
+                var downloadLink = document.createElement('a');
+                downloadLink.href = selectedOption;
+                downloadLink.download = '';
+                document.body.appendChild(downloadLink);
+                downloadLink.target = '_blank';
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+              }, 1500); // Delay in milliseconds
+            },
+            error: function(xhr, status, error) {
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'An error occurred while starting the download'
+              });
+            }
+          });
+        }
+      }
+      
+      function handleDropdownChange(value) {
+        console.log('Selected option:', value);
+      }
+      var iframe = document.getElementById('yt-iframe');
+      var videoTitle = document.getElementById('video-title');
+      if (iframe.getAttribute('src') === '') {
+        // Update the iframe content and the text message
+        videoTitle.textContent = 'No video selected'; // Update the text message
+      }
+
+    </script>
+  </body>
+</html>

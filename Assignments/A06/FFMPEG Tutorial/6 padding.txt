@@ -1,0 +1,2 @@
+Padding Video\Image:
+	ffmpeg -i photo.jpg -vf pad=860:660:30:30:pink framed_photo.jpg

@@ -1,0 +1,5 @@
+add text
+	ffmpeg -i input -vf drawtext=fontfile=arial.ttf:text=Welcome:fontcolor=green:fontsize=30 output
+
+y=h-t*100
+x=w-t*50

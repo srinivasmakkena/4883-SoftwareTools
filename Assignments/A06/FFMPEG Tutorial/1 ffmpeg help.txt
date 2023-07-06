@@ -1,0 +1,24 @@
+"ffmpeg -? or ffmpeg -h" is for basic help
+
+
+ffmpef -h specific topic
+  	eg:
+		ffmpeg -h decoder=flv
+
+Available codecs
+	ffmpeg -codecs
+
+Available decoders
+	ffmpeg -decoders
+
+Available filters
+	ffmpeg -filters
+
+Available formats
+	ffmpeg -formats
+	
+Available pixel formats
+	ffmpeg -pix_fmts
+
+Available protocols
+	ffmpeg -protocols

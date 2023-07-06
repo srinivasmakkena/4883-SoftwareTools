@@ -1,0 +1,4 @@
+ffmpeg -i input.mp4 -c:v video_codec -c:a audio_codec output.mp4
+
+ex:
+	ffmpeg -i input.mp4 -c:v libx264 -c:a aac output.mp4

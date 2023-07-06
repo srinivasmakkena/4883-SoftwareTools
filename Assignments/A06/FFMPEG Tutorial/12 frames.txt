@@ -1,0 +1,8 @@
+vid to frames
+	ffmpeg -i input.mp4 output_%03d.jpg
+
+frames to video
+	ffmpeg -framerate 30 -i input_%03d.jpg -c:v libx264 -r 30 output.mp4
+
+	ffmpeg -framerate 30 -i input_%03d.jpg -i audio.mp3 -c:v libx264 -c:a aac -r 30 -shortest output.mp4
+

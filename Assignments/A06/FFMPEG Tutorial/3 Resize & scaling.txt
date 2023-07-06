@@ -1,0 +1,6 @@
+Resizing video
+	ffmpeg -i input_file -s 320x240 output_file
+
+Special enlarging filter
+	ffmpeg -i phone_video.3gp -vf super2xsai output.mp4
+
