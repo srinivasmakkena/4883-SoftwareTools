@@ -38,14 +38,34 @@ async def docs_redirect():
 # Define the countries route
 @app.get("/countries/")
 async def countries():
-    """Returns a list of unique countries."""
+    """Returns a list of unique countries.
+     ### Example:
+      [http://localhost:5000/countries/](http://localhost:5000/countries/)
+      ### Response
+      {"data":["Afghanistan","Albania",
+            "Algeria","........................ Futuna",
+            "Yemen","Zambia","Zimbabwe"],
+      "success":true,
+      "message":"All Unique countries",
+      "size":237}
+    """
+
     response=  list(mydb.data['Country'].unique())
     return {"data": response, "success": True, "message": "All Unique countries", "size": len(response)}
 
 # Define the regions route
 @app.get("/regions/")
 async def whos():
-    """Returns a list of unique WHO regions."""
+    """Returns a list of unique WHO regions.
+       ### Example:
+      [http://localhost:5000/regions/](http://localhost:5000/regions/)
+       
+       ### Response
+       {"data":["EMRO","EURO","AFRO","WPRO","AMRO","SEARO","Other"],
+      "success":true,
+      "message":"All Unique WHO regions",
+      "size":7}
+      """
     response = list(mydb.data['WHO_region'].unique())
     return {"data": response, "success": True, "message": "All Unique WHO regions", "size": len(response)}
 
@@ -60,7 +80,15 @@ async def deaths(country:str = None,year:int = None,region:str = None):
       - region (str) : A region name
     - **Returns:**
       - (int) : The total sum of deaths based on filters (if any)
-
+       ### Example:
+        [http://localhost:5000/deaths/?year=2021](http://localhost:5000/deaths/?year=2021)
+      
+       ### Response
+       {
+        "data": 3531524,
+        "success": true,
+        "message": "Total number of deaths in 2021 is 3531524"
+        }
     """
     response=int(mydb.data['New_deaths'].sum())
     message=f"Total number of entire deaths {response}"
@@ -96,6 +124,15 @@ async def cases(country:str = None,year:int = None,region:str = None):
     - **Returns:**
       - (int) : The total sum of new cases based on filters (if any)
 
+     ### Example:
+        [http://localhost:5000/cases/?year=2020&region=EMRO](http://localhost:5000/cases/?year=2020&region=EMRO)
+      
+       ### Response
+       {
+        "data": 4912291,
+        "success": true,
+        "message": "Total number of new cases in 2020 for the WHO region of EMRO is 4912291"
+        }
     """
     response=int(mydb.data['New_cases'].sum())
     message=f"Total number of entire new cases {response}"
@@ -130,6 +167,16 @@ async def cases(min_date:str = None,max_date:str = None):
       - max_date (str) : The maximum date in the format 'YYYY-MM-DD'
     - **Returns:**
       - (str) : The country with the maximum number of deaths
+
+     ### Example:
+        [http://localhost:5000/max_deaths/?min_date=2020-12-28](http://localhost:5000/max_deaths/?min_date=2020-12-28)
+      
+       ### Response
+       {
+        "data": "United States of America",
+        "success": true,
+        "message": "The country with max deaths is United States of America with 1127152 deaths"
+        }
     """
     response=''
     message="The country with max deaths is"
@@ -167,6 +214,16 @@ async def cases(min_date:str = None,max_date:str = None):
       - max_date (str) : The maximum date in the format 'YYYY-MM-DD'
     - **Returns:**
       - (str) : The country with the minimum number of deaths
+    
+       ### Example:
+        [http://localhost:5000/min_deaths/?min_date=2020-12-28](http://localhost:5000/min_deaths/?min_date=2020-12-28)
+      
+       ### Response
+        {
+        "data": "Democratic People's Republic of Korea",
+        "success": true,
+        "message": "The country with min deaths is Democratic People's Republic of Korea with 0 deaths"
+        }
     """
     response=''
     message="The country with min deaths is"
@@ -197,6 +254,16 @@ async def avg_deaths():
     This method will return the average number of deaths across all countries.
     - **Returns:**
      - (float) : The average number of deaths
+
+      ### Example:
+        [http://localhost:5000/avg_deaths/](http://localhost:5000/avg_deaths/)
+      
+       ### Response
+       {
+        "data": 29306.810126582277,
+        "success": true,
+        "message": "Average number of deaths across all countries: 29306.810126582277"
+        }
     """
     response=int(mydb.data['New_deaths'].sum())/len(mydb.data['Country'].unique())
     message=f"Average number of deaths across all countries: {response}"
