@@ -152,6 +152,3 @@ You can also add audio to the video using the `-i audio.mp3` option.
 
 These are just a few examples of what you can do with FFmpeg. It is a versatile tool with numerous options and capabilities for audio and video manipulation. Experiment with different commands and explore the FFmpeg documentation for more advanced usage.
 
----
-
-I hope this improved version of the FFmpeg tutorial helps you better understand and utilize the various commands and options available.
